@@ -1,0 +1,187 @@
+\documentclass{article}
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+
+
+% Other
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{lipsum}
+\usepackage{hyperref}
+
+
+
+\pagestyle{fancy}
+\newlength\FHoffset
+\setlength\FHoffset{0.1cm}
+
+\addtolength\headwidth{2\FHoffset}
+\fancyhead[L]{Any Student}
+\fancyhead[C]{COMP0000J}
+\fancyhead[R]{\today}
+
+
+
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{Orange!15}
+\colorlet{LightGreen}{Green!15}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+\declaretheoremstyle[name=Theorem,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightGray}
+
+\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{proposition}
+\tcolorboxenvironment{proposition}{colback=LightOrange}
+
+\declaretheoremstyle[name=Principle,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=theorem]{principle}
+\tcolorboxenvironment{principle}{colback=LightGreen}
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=6.0in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+
+% ------------------------------------------------------------------------------
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Cover Page and ToC
+% ------------------------------------------------------------------------------
+
+
+
+
+
+\title{ \normalsize  \includegraphics[width=0.1\textwidth]{images/UCD_Logo.pdf} \textbf{ }
+\includegraphics[width=0.15\textwidth]{images/BJUT_Logo.pdf} \par \textsc{Beijing-Dublin International College}
+		\\ [2.0cm]
+		\HRule{1.5pt} \\ [0.35cm]
+		\LARGE \textbf{\uppercase{COMP0000J Project Report}}
+		\HRule{1.5pt} \\ [0.9cm] \textbf{\LARGE{Project Dalek}} \vspace*{10\baselineskip}
+		}
+\date{\today}
+\author{\textbf{Author} \\ 
+Any Student (00000000) \\
+  }
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+% ------------------------------------------------------------------------------
+
+\begin{abstract}
+  %% Text of the abstract
+  This template will help you to write your bibliographic and final reports using \LaTeX{}. You'll find here the examples of text structuring as well as tables, figures, citations and references. For other features of \LaTeX, see tutorials on \href{https://www.overleaf.com/learn}{\textbf{Overleaf}} or use this \href{https://wch.github.io/latexsheet/}{\textbf{cheatsheet}}. To work with this template, download its entire folder (including /bibliography and /figures), and run your \LaTeX{}  editor like \href{http://www.xm1math.net/texmaker/}{\textbf{Texmaker}} or \href{https://www.overleaf.com}{\textbf{Overleaf}}. Then make a plan by changing the document's structure with \textit{section} and \textit{subsection} commands. Finally, delete the \textit{lipsum} fillings and start writing you report. Good luck!
+  \end{abstract}
+  
+  
+  \section{Introduction}
+  
+  \textbf{Example of citation: \cite{Smith_2013} and \cite{Smith_2012}}. \lipsum[2]
+  
+  \section{Main part}
+  \label{S:1}
+  \lipsum[9]
+  
+  Examples of lists:
+  \begin{itemize}
+  \item Bullet point one
+  \item Bullet point two
+  \end{itemize}
+  
+  \begin{enumerate}
+  \item Numbered list item one
+  \item Numbered list item two
+  \end{enumerate}
+  
+  \subsection{Subsection 1}
+  
+  \textbf{Example of table reference: see Table \ref{tab:example}}.
+  \lipsum[4]
+  
+  \begin{table}[h] 
+  \centering
+  \begin{tabular}{l l l}
+  \hline
+  \textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+  \hline
+  Treatment 1 & 0.0003262 & 0.562 \\
+  Treatment 2 & 0.0015681 & 0.910 \\
+  Treatment 3 & 0.0009271 & 0.296 \\
+  \hline
+  \end{tabular}
+  \caption{Table caption}
+  \label{tab:example}
+  \end{table}
+  
+  \subsection{Subsection 2}
+  
+  \textbf{Example of figure reference: see Figure \ref{fig:example}}. 
+  \lipsum[5]
+  
+  \begin{figure}[ht]
+  \centering\includegraphics[width=0.4\linewidth]{figures/placeholder.jpg}
+  \caption{Figure caption}
+  \label{fig:example}
+  \end{figure}
+  
+  \textbf{Example of equation reference: see Equation \eqref{eq:emc}}. 
+  \lipsum[6]
+  
+  \begin{equation} 
+  \label{eq:emc}
+  e = mc^2
+  \end{equation}
+  
+  \subsection{Subsection 3}
+  
+  \textbf{Example of reference to Section \ref{S:1}.} 
+  \lipsum[7]
+  \lipsum[8]
+  
+  
+  
+  \section{Results (optional)}
+  
+  \lipsum[9]
+  
+  \section{Conclusion}
+  
+  \lipsum[10]
+  
+  %----------------------------------------------------------------------------------------
+  %	Bibliography
+  %----------------------------------------------------------------------------------------
+  \bibliography{bibliography/sample}{}
+  \bibliographystyle{plain}
+  
+  \end{document}

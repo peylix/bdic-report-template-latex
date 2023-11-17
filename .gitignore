@@ -1,0 +1,10 @@
+.DS_Store
+report.aux
+report.bbl
+report.fdb_latexmk
+report.blg
+report.fls
+report.log
+report.out
+report.synctex.gz
+report.toc
