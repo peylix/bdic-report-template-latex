@@ -27,14 +27,27 @@
 
 
 
+% ------------------------------------------------------------------------------
+% Name, Course Code and Date
+% ------------------------------------------------------------------------------
+
+\newcommand{\name}{Any Student}
+\newcommand{\idnumber}{00000000}
+\newcommand{\coursecode}{COMP0000J}
+\newcommand{\paperdate}{\today}
+
+% ------------------------------------------------------------------------------
+
+
+
 \pagestyle{fancy}
 \newlength\FHoffset
 \setlength\FHoffset{0.1cm}
 
 \addtolength\headwidth{2\FHoffset}
-\fancyhead[L]{Any Student}
-\fancyhead[C]{COMP0000J}
-\fancyhead[R]{\today}
+\fancyhead[L]{\name}
+\fancyhead[C]{\coursecode}
+\fancyhead[R]{\paperdate}
 
 
 
@@ -74,21 +87,17 @@
 % Cover Page and ToC
 % ------------------------------------------------------------------------------
 
-
-
-
-
 \title{ \normalsize  \includegraphics[width=0.1\textwidth]{images/UCD_Logo.pdf} \textbf{ }
 \includegraphics[width=0.15\textwidth]{images/BJUT_Logo.pdf} \par \textsc{Beijing-Dublin International College}
 		\\ [2.0cm]
 		\HRule{1.5pt} \\ [0.35cm]
-		\LARGE \textbf{\uppercase{COMP0000J Project Report}}
+		\LARGE \textbf{\uppercase{\coursecode \ Project Report}}
 		\HRule{1.5pt} \\ [0.9cm] \textbf{\LARGE{Project Dalek}} \vspace*{10\baselineskip}
 		}
-\date{\today}
+\date{\paperdate}
 \author{\textbf{Author} \\ 
-Any Student (00000000) \\
-  }
+    \name \ (\idnumber) \\
+}
 
 \maketitle
 \newpage
