@@ -57,17 +57,19 @@
 
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 
-\declaretheoremstyle[name=Theorem,]{thmsty}
+% Theorem Styles
+\declaretheoremstyle[name=Theorem]{thmsty}
 \declaretheorem[style=thmsty,numberwithin=section]{theorem}
 \tcolorboxenvironment{theorem}{colback=LightGray}
 
-\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheoremstyle[name=Proposition]{prosty}
 \declaretheorem[style=prosty,numberlike=theorem]{proposition}
 \tcolorboxenvironment{proposition}{colback=LightOrange}
 
-\declaretheoremstyle[name=Principle,]{prcpsty}
+\declaretheoremstyle[name=Principle]{prcpsty}
 \declaretheorem[style=prcpsty,numberlike=theorem]{principle}
 \tcolorboxenvironment{principle}{colback=LightGreen}
+
 
 \setstretch{1.2}
 \geometry{
@@ -86,6 +88,8 @@
 % ------------------------------------------------------------------------------
 % Cover Page and ToC
 % ------------------------------------------------------------------------------
+
+% \pagenumbering{roman} % Roman numerals for frontpages
 
 \title{ \normalsize  \includegraphics[width=0.1\textwidth]{images/UCD_Logo.pdf} \textbf{ }
 \includegraphics[width=0.15\textwidth]{images/BJUT_Logo.pdf} \par \textsc{Beijing-Dublin International College}
@@ -106,6 +110,8 @@
 \newpage
 
 % ------------------------------------------------------------------------------
+
+% \pagenumbering{arabic} % Arabic numerals for main content
 
 \begin{abstract}
     %% Text of the abstract
@@ -186,6 +192,9 @@
 \section{Conclusion}
 
     \lipsum[10]
+    \begin{proposition}
+        \lipsum[11]
+    \end{proposition}
 
 %----------------------------------------------------------------------------------------
 %	Bibliography
