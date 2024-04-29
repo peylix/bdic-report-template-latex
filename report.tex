@@ -1,63 +1,69 @@
 \documentclass{article}
 
-\usepackage{amsmath, amsthm, amssymb, amsfonts}
-\usepackage{thmtools}
-\usepackage{graphicx}
-\usepackage{setspace}
-\usepackage{geometry}
-\usepackage{float}
-\usepackage{hyperref}
+% Packages for text and input
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage{framed}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{tcolorbox}
-\usepackage{multirow}
+
+% Packages for math and theorems
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+
+% Packages for tables and figures
+\usepackage{graphicx}
+\usepackage{float}
 \usepackage{tabularx}
 \usepackage{longtable}
-\usepackage{fancyhdr}
-
-
-% Other
-\usepackage{algorithmic}
-\usepackage{array}
+\usepackage{multirow}
 \usepackage[caption=false,font=footnotesize]{subfig}
-\usepackage{lipsum}
+
+% Packages for page layout and hyperlinks
+\usepackage{geometry}
+\usepackage{fancyhdr}
 \usepackage{hyperref}
 
+% Packages for colors and boxes
+\usepackage[dvipsnames]{xcolor}
+\usepackage{framed}
+\usepackage{tcolorbox}
 
+% Other useful packages
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{lipsum}
 
-% ------------------------------------------------------------------------------
-% Name, Course Code and Date
-% ------------------------------------------------------------------------------
+% Page layout configuration
+\geometry{
+    textheight=9in,
+    textwidth=6.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+\setstretch{1.2}
 
-\newcommand{\name}{Any Student}
-\newcommand{\idnumber}{00000000}
-\newcommand{\coursecode}{COMP0000J}
-\newcommand{\paperdate}{\today}
-
-% ------------------------------------------------------------------------------
-
-
-
+% Header and footer configuration
 \pagestyle{fancy}
 \newlength\FHoffset
 \setlength\FHoffset{0.1cm}
-
 \addtolength\headwidth{2\FHoffset}
 \fancyhead[L]{\name}
 \fancyhead[C]{\coursecode}
 \fancyhead[R]{\paperdate}
 
-
-
+% User-defined colors
 \colorlet{LightGray}{White!90!Periwinkle}
 \colorlet{LightOrange}{Orange!15}
 \colorlet{LightGreen}{Green!15}
 
+% User commands and theorem styles
+\newcommand{\name}{Any Student}
+\newcommand{\idnumber}{00000000}
+\newcommand{\coursecode}{COMP0000J}
+\newcommand{\paperdate}{\today}
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 
-% Theorem Styles
 \declaretheoremstyle[name=Theorem]{thmsty}
 \declaretheorem[style=thmsty,numberwithin=section]{theorem}
 \tcolorboxenvironment{theorem}{colback=LightGray}
@@ -70,136 +76,54 @@
 \declaretheorem[style=prcpsty,numberlike=theorem]{principle}
 \tcolorboxenvironment{principle}{colback=LightGreen}
 
-
-\setstretch{1.2}
-\geometry{
-    textheight=9in,
-    textwidth=6.0in,
-    top=1in,
-    headheight=12pt,
-    headsep=25pt,
-    footskip=30pt
-}
-
-% ------------------------------------------------------------------------------
-
 \begin{document}
 
-% ------------------------------------------------------------------------------
-% Cover Page and ToC
-% ------------------------------------------------------------------------------
-
-% \pagenumbering{roman} % Roman numerals for frontpages
-
-\title{ \normalsize  \includegraphics[width=0.1\textwidth]{images/UCD_Logo.pdf} \textbf{ }
-\includegraphics[width=0.15\textwidth]{images/BJUT_Logo.pdf} \par \textsc{Beijing-Dublin International College}
-		\\ [2.0cm]
-		\HRule{1.5pt} \\ [0.35cm]
-		\LARGE \textbf{\uppercase{\coursecode \ Project Report}}
-		\HRule{1.5pt} \\ [0.9cm] \textbf{\LARGE{Project Dalek}} \vspace*{10\baselineskip}
-		}
-\date{\paperdate}
-\author{\textbf{Author} \\ 
-    \name \ (\idnumber) \\
-}
-
-\maketitle
-\newpage
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    \includegraphics[width=0.1\textwidth]{images/UCD_Logo.pdf} \hspace{0.5cm}
+    \includegraphics[width=0.15\textwidth]{images/BJUT_Logo.pdf} \par
+    \vspace{0.8cm}
+    {\Large \textsc{Beijing-Dublin International College}} \par
+    \vspace{1.5cm}
+    \HRule{0.2pt} \par
+    \vspace{0.5cm}
+    {\Huge \textbf{\uppercase{\coursecode \ Project Report}}} \par
+    \vspace{0cm}
+    \HRule{0.2pt} \par
+    \vspace{1.0cm}
+    {\LARGE \textbf{Project Dalek}} \par
+    \vspace{8cm}
+    \textbf{Author} \par
+    \name \ (\idnumber) \par
+    \vspace{1cm}
+    \textbf{Date} \par
+    \today \par
+    \vfill
+\end{titlepage}
 
 \tableofcontents
 \newpage
 
-% ------------------------------------------------------------------------------
-
-% \pagenumbering{arabic} % Arabic numerals for main content
-
 \begin{abstract}
-    %% Text of the abstract
-    This template will help you to write your bibliographic and final reports using \LaTeX{}. You'll find here the examples of text structuring as well as tables, figures, citations and references. For other features of \LaTeX, see tutorials on \href{https://www.overleaf.com/learn}{\textbf{Overleaf}} or use this \href{https://wch.github.io/latexsheet/}{\textbf{cheatsheet}}. To work with this template, download its entire folder (including /bibliography and /figures), and run your \LaTeX{}  editor like \href{http://www.xm1math.net/texmaker/}{\textbf{Texmaker}} or \href{https://www.overleaf.com}{\textbf{Overleaf}}. Then make a plan by changing the document's structure with \textit{section} and \textit{subsection} commands. Finally, delete the \textit{lipsum} fillings and start writing you report. Good luck!
+    %% Abstract text goes here.
 \end{abstract}
 
-
 \section{Introduction}
+    %% Introduction text goes here.
 
-    \textbf{Example of citation: \cite{Smith_2013} and \cite{Smith_2012}}. \lipsum[2]
-
-\section{Main part}
-    \label{S:1}
-    \lipsum[9]
-
-    Examples of lists:
-    \begin{itemize}
-        \item Bullet point one
-        \item Bullet point two
-    \end{itemize}
-
-    \begin{enumerate}
-        \item Numbered list item one
-        \item Numbered list item two
-    \end{enumerate}
-
-    \subsection{Subsection 1}
-
-        \textbf{Example of table reference: see Table \ref{tab:example}}.
-        \lipsum[4]
-
-        \begin{table}[ht] 
-            \centering
-            \begin{tabular}{l l l}
-                \hline
-                \textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-                \hline
-                Treatment 1 & 0.0003262 & 0.562 \\
-                Treatment 2 & 0.0015681 & 0.910 \\
-                Treatment 3 & 0.0009271 & 0.296 \\
-                \hline
-            \end{tabular}
-            \caption{Table caption}
-            \label{tab:example}
-        \end{table}
-
-    \subsection{Subsection 2}
-
-        \textbf{Example of figure reference: see Figure \ref{fig:example}}. 
-        \lipsum[5]
-
-        \begin{figure}[H]
-            \centering\includegraphics[width=0.4\linewidth]{figures/placeholder.jpg}
-            \caption{Figure caption}
-            \label{fig:example}
-        \end{figure}
-
-        \textbf{Example of equation reference: see Equation \eqref{eq:emc}}. 
-        \lipsum[6]
-
-        \begin{equation} 
-            \label{eq:emc}
-            e = mc^2
-        \end{equation}
-
-    \subsection{Subsection 3}
-
-        \textbf{Example of reference to Section \ref{S:1}.} 
-        \lipsum[7]
-        \lipsum[8]
-
-
-
-\section{Results (optional)}
-
-    \lipsum[9]
-
-\section{Conclusion}
-
-    \lipsum[10]
+\section{Main Part}
+    %% Main text goes here.
     \begin{proposition}
-        \lipsum[11]
+        Sample proposition.
     \end{proposition}
 
-%----------------------------------------------------------------------------------------
-%	Bibliography
-%----------------------------------------------------------------------------------------
-\bibliography{bibliography/sample}{}
+\section{Conclusion}
+    %% Conclusion text goes here.
+    Sample citation \cite{Smith_2012}.
+
+% Bibliography
+\bibliography{bibliography/sample}
 \bibliographystyle{plain}
 
 \end{document}
