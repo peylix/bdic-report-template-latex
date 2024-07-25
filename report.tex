@@ -1,61 +1,13 @@
-\documentclass{article}
+\documentclass{report}
 
-% Packages for text and input
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-
-% Packages for math and theorems
-\usepackage{amsmath, amsthm, amssymb, amsfonts}
-\usepackage{thmtools}
-
-% Packages for tables and figures
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{tabularx}
-\usepackage{longtable}
-\usepackage{multirow}
-\usepackage[caption=false,font=footnotesize]{subfig}
-
-% Packages for page layout and hyperlinks
-\usepackage{geometry}
-\usepackage{fancyhdr}
-\usepackage{hyperref}
-
-% Packages for colors and boxes
-\usepackage[dvipsnames]{xcolor}
-\usepackage{framed}
-\usepackage{tcolorbox}
-
-% Other useful packages
-\usepackage{algorithmic}
-\usepackage{array}
-\usepackage{setspace}
-\usepackage{lipsum}
-
-% Page layout configuration
-\geometry{
-    textheight=9in,
-    textwidth=6.5in,
-    top=1in,
-    headheight=12pt,
-    headsep=25pt,
-    footskip=30pt
-}
-\setstretch{1.2}
-
-% Header and footer configuration
-\pagestyle{fancy}
-\newlength\FHoffset
-\setlength\FHoffset{0.1cm}
-\addtolength\headwidth{2\FHoffset}
-\fancyhead[L]{\name}
-\fancyhead[C]{\coursecode}
-\fancyhead[R]{\paperdate}
-
-% User-defined colors
-\colorlet{LightGray}{White!90!Periwinkle}
-\colorlet{LightOrange}{Orange!15}
-\colorlet{LightGreen}{Green!15}
+% Title page layout and spacing configuration
+\newcommand{\vspaceone}{1cm}
+\newcommand{\vspacetwo}{0.8cm}
+\newcommand{\vspacethree}{1.5cm}
+\newcommand{\vspacefour}{0.5cm}
+\newcommand{\vspacefive}{1.0cm}
+\newcommand{\vspacesix}{8cm}
+\newcommand{\vspaceseven}{1cm}
 
 % User commands and theorem styles
 \newcommand{\name}{Any Student}
@@ -64,44 +16,9 @@
 \newcommand{\paperdate}{\today}
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 
-\declaretheoremstyle[name=Theorem]{thmsty}
-\declaretheorem[style=thmsty,numberwithin=section]{theorem}
-\tcolorboxenvironment{theorem}{colback=LightGray}
-
-\declaretheoremstyle[name=Proposition]{prosty}
-\declaretheorem[style=prosty,numberlike=theorem]{proposition}
-\tcolorboxenvironment{proposition}{colback=LightOrange}
-
-\declaretheoremstyle[name=Principle]{prcpsty}
-\declaretheorem[style=prcpsty,numberlike=theorem]{principle}
-\tcolorboxenvironment{principle}{colback=LightGreen}
-
 \begin{document}
 
-\begin{titlepage}
-    \centering
-    \vspace*{1cm}
-    \includegraphics[width=0.1\textwidth]{images/UCD_Logo.pdf} \hspace{0.5cm}
-    \includegraphics[width=0.15\textwidth]{images/BJUT_Logo.pdf} \par
-    \vspace{0.8cm}
-    {\Large \textsc{Beijing-Dublin International College}} \par
-    \vspace{1.5cm}
-    \HRule{0.2pt} \par
-    \vspace{0.5cm}
-    \setstretch{1.0}
-    {\huge \textbf{\uppercase{\coursecode \ Project Report}}} \par
-    \vspace{0cm}
-    \HRule{0.2pt} \par
-    \vspace{1.0cm}
-    {\LARGE \textbf{Project Dalek}} \par
-    \vspace{8cm}
-    \textbf{Author} \par
-    \name \ (\idnumber) \par
-    \vspace{1cm}
-    \textbf{Date} \par
-    \today \par
-    \vfill
-\end{titlepage}
+\makenewtitlepage
 
 \tableofcontents
 \newpage
