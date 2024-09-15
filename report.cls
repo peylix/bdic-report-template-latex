@@ -34,6 +34,10 @@
 \RequirePackage{array}
 \RequirePackage{setspace}
 \RequirePackage{lipsum}
+\RequirePackage{ifthen}
+\RequirePackage{pgffor}
+\RequirePackage{bookmark}
+
 
 % Page layout configuration
 \geometry{
@@ -51,17 +55,14 @@
 \newlength\FHoffset
 \setlength\FHoffset{0.1cm}
 \addtolength\headwidth{2\FHoffset}
-\fancyhead[L]{\name}
+\fancyhead[L]{\authorname}
 \fancyhead[C]{\coursecode}
 \fancyhead[R]{\paperdate}
 
 % User-defined colors
-\colorlet{LightGray}{White!90!Periwinkle}
-\colorlet{LightOrange}{Orange!15}
-\colorlet{LightGreen}{Green!15}
 \definecolor{UCDGreen}{rgb}{0.5, 0.71, 0.31}
 \definecolor{UCDBlue}{rgb}{0, 0.55, 0.77}
-\definecolor{UCDYellow}{rgb}{0.95, 0.76, 0.12}
+\definecolor{UCDYellow}{rgb}{0.95, 0.76, 0.18}
 
 \tcbset {
   base/.style={
@@ -114,6 +115,15 @@
 \declaretheorem[style=prcpsty,numberlike=theorem]{principle}
 \tcolorboxenvironment{principle}{colframe=UCDYellow}
 
+% Define the number of items in the list
+\newcounter{totalnames}
+\newcommand{\countnames}{
+    \setcounter{totalnames}{0} % Reset counter
+    \foreach \name in \namelist {
+        \stepcounter{totalnames}
+    }
+}
+
 \newcommand{\makenewtitlepage}{
     \begin{titlepage}
         \centering
@@ -126,16 +136,27 @@
         \HRule{0.2pt} \par
         \vspace{\vspacefour}
         \setstretch{1.0}
-        {\huge \textbf{\uppercase{\coursecode \ Project Report}}} \par
+        {\huge \textbf{\uppercase{\coursecode \ \reporttitle}}} \par
         \vspace{0cm}
         \HRule{0.2pt} \par
         \vspace{\vspacefive}
-        {\LARGE \textbf{Project Dalek}} \par
+        {\LARGE \textbf{\projecttitle}} \par
         \vspace{\vspacesix}
-        \textbf{Author} \par
-        \name \ (\idnumber) \par
+        \countnames
+        \textbf{
+          \ifthenelse{\value{totalnames} > 1}
+          {Authors}
+          {Author}
+        } \par
+        \vspace{0.1cm}
+        \foreach \name in \namelist {
+            \name \par
+            \vspace{0.1cm}
+        }
+        % \name \ (\idnumber) \par
         \vspace{\vspaceseven}
         \textbf{Date} \par
+        \vspace{0.1cm}
         \today \par
         \vfill
     \end{titlepage}

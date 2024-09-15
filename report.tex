@@ -10,11 +10,19 @@
 \newcommand{\vspaceseven}{1cm}
 
 % User commands and theorem styles
-\newcommand{\name}{Any Student}
-\newcommand{\idnumber}{00000000}
+% If this is a group project, you can use the following commands to define the group members
+% If this is individual, just add your name to both \authorname and \namelist
+\newcommand{\authorname}{Group 0}
+\newcommand{\namelist}{
+    {Any Student, 00000000},
+    {Another Student, 00000001}
+}
 \newcommand{\coursecode}{COMP0000J}
 \newcommand{\paperdate}{\today}
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+\newcommand{\reporttitle}{Intro to Temporal Engineering}
+\newcommand{\projecttitle}{Project: A Simple Time Machine}
 
 \begin{document}
 
@@ -33,7 +41,7 @@
 
 \section{Main Part}
     \input{src/main_part.tex}
-    
+
 
 \section{Conclusion}
     \input{src/conclusion.tex}
