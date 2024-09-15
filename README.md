@@ -4,9 +4,9 @@ A simple but elegant LaTeX template for reports for various BDIC courses.
 
 ## Screenshots
 
-<img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-1.png" alt="Entity-Relationship Diagram" style="zoom:50%;" />
-<img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-2.png" alt="Entity-Relationship Diagram" style="zoom:50%;" />
-<img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-3.png" alt="Entity-Relationship Diagram" style="zoom:50%;" />
+<img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-1.jpg" alt="screenshot-1" style="zoom:50%;" />
+<img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-2.jpg" alt="screenshot-2" style="zoom:50%;" />
+<img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-3.jpg" alt="screenshot-3" style="zoom:50%;" />
 
 ## Suggestions
 
