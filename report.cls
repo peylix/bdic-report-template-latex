@@ -27,6 +27,7 @@
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{framed}
 \RequirePackage{tcolorbox}
+\usepackage{amsthm}
 
 % Other useful packages
 \RequirePackage{algorithmic}
@@ -58,20 +59,60 @@
 \colorlet{LightGray}{White!90!Periwinkle}
 \colorlet{LightOrange}{Orange!15}
 \colorlet{LightGreen}{Green!15}
+\definecolor{UCDGreen}{rgb}{0.5, 0.71, 0.31}
+\definecolor{UCDBlue}{rgb}{0, 0.55, 0.77}
+\definecolor{UCDYellow}{rgb}{0.95, 0.76, 0.12}
+
+\tcbset {
+  base/.style={
+    arc=0mm, 
+    bottomtitle=0.5mm,
+    boxrule=0mm,
+    colbacktitle=black!10!white, 
+    coltitle=black, 
+    fonttitle=\bfseries, 
+    left=2.5mm,
+    leftrule=1mm,
+    right=3.5mm,
+    title={#1},
+    toptitle=0.75mm, 
+  }
+}
+
+
+\newtcolorbox{greenbox}[1]{
+  colframe=UCDGreen, 
+  base={#1}
+}
+
+\newtcolorbox{bluebox}[1]{
+    colframe=UCDBlue,
+    base={#1}
+}
+
+\newtcolorbox{yellowbox}[1]{
+    colframe=UCDYellow,
+    base={#1}
+}
+
+\newtcolorbox{subbox}[1]{
+  colframe=black!30!white,
+  base={#1}
+}
 
 
 
 \declaretheoremstyle[name=Theorem]{thmsty}
 \declaretheorem[style=thmsty,numberwithin=section]{theorem}
-\tcolorboxenvironment{theorem}{colback=LightGray}
+\tcolorboxenvironment{theorem}{colframe=UCDGreen}
 
 \declaretheoremstyle[name=Proposition]{prosty}
 \declaretheorem[style=prosty,numberlike=theorem]{proposition}
-\tcolorboxenvironment{proposition}{colback=LightOrange}
+\tcolorboxenvironment{proposition}{colframe=UCDBlue}
 
 \declaretheoremstyle[name=Principle]{prcpsty}
 \declaretheorem[style=prcpsty,numberlike=theorem]{principle}
-\tcolorboxenvironment{principle}{colback=LightGreen}
+\tcolorboxenvironment{principle}{colframe=UCDYellow}
 
 \newcommand{\makenewtitlepage}{
     \begin{titlepage}
