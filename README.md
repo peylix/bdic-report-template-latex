@@ -1,4 +1,4 @@
-# bdic-report-template-latex
+# BDIC LaTeX Report Template
 
 A simple but elegant LaTeX template for reports for various BDIC courses.
 
@@ -10,7 +10,11 @@ A simple but elegant LaTeX template for reports for various BDIC courses.
 
 ## Suggestions
 
+在该项目的文件层级中，建议将跟文档内容相关的图片放在 `figures` 路径下，将用于装饰目的的图片放到 `images` 路径下。
+
 In the file structure of this project, pictures relevant to the main content of the document should be placed under `figures`, while pictures for decorative purposes should be put into `images`.
+
+在编辑文章的不同部分时，最好把每部分的内容分别放到 `src` 路径下的不同文件中，以使主 Tex 文件更加整洁。
 
 When editing different sections of the document, it is better to put each section into a separate file under the `src` directory to keep the main tex file neat and clear.
 
