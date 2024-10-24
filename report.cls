@@ -66,13 +66,14 @@
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0pt}
 
+% Reduce the space between the title and the text
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{0pt}{10pt}{5pt}{\normalfont\Large\bfseries}}
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0pt}{8pt}{3pt}{\normalfont\large\bfseries}}
 \makeatother
 
 
-% User-defined colors
+% Colors for the boxes and listings
 \definecolor{UCDGreen}{rgb}{0.5, 0.71, 0.31}
 \definecolor{UCDBlue}{rgb}{0, 0.55, 0.77}
 \definecolor{UCDYellow}{rgb}{0.95, 0.76, 0.18}
@@ -83,6 +84,7 @@
 \definecolor{keywordcolor}{rgb}{0.9, 0.3, 0.1}
 \definecolor{bordercolor}{rgb}{0.7, 0.7, 0.7}
 \definecolor{linenumberbg}{rgb}{0.95, 0.95, 0.95}
+
 
 \tcbset {
     base/.style={
@@ -99,7 +101,6 @@
         toptitle=0.75mm,
     }
 }
-
 
 \newtcolorbox{greenbox}[1]{
     colframe=UCDGreen, 
@@ -122,7 +123,6 @@
 }
 
 
-
 \declaretheoremstyle[name=Theorem]{thmsty}
 \declaretheorem[style=thmsty,numberwithin=section]{theorem}
 \tcolorboxenvironment{theorem}{colframe=UCDGreen}
@@ -136,6 +136,7 @@
 \tcolorboxenvironment{principle}{colframe=UCDYellow}
 
 
+% Listing configuration
 \lstdefinestyle{elegantstyle}{
     backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen}\textit,
@@ -164,7 +165,7 @@
 \lstset{style=elegantstyle}
 
 
-% Define the number of items in the list
+% Calculate the number of authors
 \newcounter{totalnames}
 \newcommand{\countnames}{
     \setcounter{totalnames}{0} % Reset counter
@@ -173,6 +174,7 @@
     }
 }
 
+% Title page layout and spacing configuration
 \newcommand{\makenewtitlepage}{
     \begingroup
     \setlength{\parskip}{1pt}
@@ -193,6 +195,7 @@
         \vspace{\vspacefive}
         {\LARGE \textbf{\projecttitle}} \par
         \vspace{\vspacesix}
+        % if there is more than one author, use "Authors", otherwise use "Author"
         \countnames
         \textbf{
             \ifthenelse{\value{totalnames} > 1}
