@@ -39,6 +39,7 @@
 \RequirePackage{bookmark}
 \RequirePackage{listings}
 \RequirePackage{DejaVuSansMono}
+\RequirePackage{setspace}
 
 
 % Page layout configuration
@@ -60,6 +61,16 @@
 \fancyhead[L]{\authorname}
 \fancyhead[C]{\coursecode}
 \fancyhead[R]{\paperdate}
+
+% Paragraph and line spacing configuration
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0pt}{10pt}{5pt}{\normalfont\Large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0pt}{8pt}{3pt}{\normalfont\large\bfseries}}
+\makeatother
+
 
 % User-defined colors
 \definecolor{UCDGreen}{rgb}{0.5, 0.71, 0.31}
@@ -163,6 +174,8 @@
 }
 
 \newcommand{\makenewtitlepage}{
+    \begingroup
+    \setlength{\parskip}{1pt}
     \begin{titlepage}
         \centering
         \vspace*{\vspaceone}
@@ -198,4 +211,5 @@
         \today \par
         \vfill
     \end{titlepage}
+    \endgroup
 }
