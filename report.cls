@@ -76,34 +76,34 @@
 \definecolor{UCDGreen}{rgb}{0.5, 0.71, 0.31}
 \definecolor{UCDBlue}{rgb}{0, 0.55, 0.77}
 \definecolor{UCDYellow}{rgb}{0.95, 0.76, 0.18}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{keywordcolor}{rgb}{0.9,0.3,0.1}
-\definecolor{bordercolor}{rgb}{0.7,0.7,0.7}
-\definecolor{linenumberbg}{rgb}{0.95,0.95,0.95}
+\definecolor{backcolour}{rgb}{0.95, 0.95, 0.92}
+\definecolor{codegreen}{rgb}{0, 0.6, 0}
+\definecolor{codegray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{codepurple}{rgb}{0.58, 0, 0.82}
+\definecolor{keywordcolor}{rgb}{0.9, 0.3, 0.1}
+\definecolor{bordercolor}{rgb}{0.7, 0.7, 0.7}
+\definecolor{linenumberbg}{rgb}{0.95, 0.95, 0.95}
 
 \tcbset {
-  base/.style={
-    arc=0mm, 
-    bottomtitle=0.5mm,
-    boxrule=0mm,
-    colbacktitle=black!10!white, 
-    coltitle=black, 
-    fonttitle=\bfseries, 
-    left=2.5mm,
-    leftrule=1mm,
-    right=3.5mm,
-    title={#1},
-    toptitle=0.75mm, 
-  }
+    base/.style={
+        arc=0mm,
+        bottomtitle=0.5mm,
+        boxrule=0mm,
+        colbacktitle=black!10!white,
+        coltitle=black,
+        fonttitle=\bfseries,
+        left=2.5mm,
+        leftrule=1mm,
+        right=3.5mm,
+        title={#1},
+        toptitle=0.75mm,
+    }
 }
 
 
 \newtcolorbox{greenbox}[1]{
-  colframe=UCDGreen, 
-  base={#1}
+    colframe=UCDGreen, 
+    base={#1}
 }
 
 \newtcolorbox{bluebox}[1]{
@@ -117,8 +117,8 @@
 }
 
 \newtcolorbox{subbox}[1]{
-  colframe=black!30!white,
-  base={#1}
+    colframe=black!30!white,
+    base={#1}
 }
 
 
@@ -195,9 +195,9 @@
         \vspace{\vspacesix}
         \countnames
         \textbf{
-          \ifthenelse{\value{totalnames} > 1}
-          {Authors}
-          {Author}
+            \ifthenelse{\value{totalnames} > 1}
+            {Authors}
+            {Author}
         } \par
         \vspace{0.1cm}
         \foreach \name in \namelist {
