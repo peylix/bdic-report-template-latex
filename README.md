@@ -4,10 +4,16 @@ A simple but elegant LaTeX template for reports for various modules in Beijing-D
 
 ## Screenshots
 
-<img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-1.jpg" alt="screenshot-1" style="zoom:25%;" />
-<img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-2.jpg" alt="screenshot-2" style="zoom:25%;" />
-<img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-3.jpg" alt="screenshot-3" style="zoom:25%;" />
-<img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-4.jpg" alt="screenshot-4" style="zoom:25%;" />
+<table>
+  <tr>
+    <td><img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-1.jpg" width="200"/></td>
+    <td><img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-2.jpg" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-3.jpg" width="200"/></td>
+    <td><img src="https://github.com/peylix/bdic-report-template-latex/blob/main/screenshots/screenshot-4.jpg" width="200"/></td>
+  </tr>
+</table>
 
 ## Suggestions
 
