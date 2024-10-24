@@ -27,7 +27,7 @@
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{framed}
 \RequirePackage{tcolorbox}
-\usepackage{amsthm}
+\RequirePackage{amsthm}
 
 % Other useful packages
 \RequirePackage{algorithmic}
@@ -37,6 +37,8 @@
 \RequirePackage{ifthen}
 \RequirePackage{pgffor}
 \RequirePackage{bookmark}
+\RequirePackage{listings}
+\RequirePackage{DejaVuSansMono}
 
 
 % Page layout configuration
@@ -63,6 +65,13 @@
 \definecolor{UCDGreen}{rgb}{0.5, 0.71, 0.31}
 \definecolor{UCDBlue}{rgb}{0, 0.55, 0.77}
 \definecolor{UCDYellow}{rgb}{0.95, 0.76, 0.18}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{keywordcolor}{rgb}{0.9,0.3,0.1}
+\definecolor{bordercolor}{rgb}{0.7,0.7,0.7}
+\definecolor{linenumberbg}{rgb}{0.95,0.95,0.95}
 
 \tcbset {
   base/.style={
@@ -114,6 +123,35 @@
 \declaretheoremstyle[name=Principle]{prcpsty}
 \declaretheorem[style=prcpsty,numberlike=theorem]{principle}
 \tcolorboxenvironment{principle}{colframe=UCDYellow}
+
+
+\lstdefinestyle{elegantstyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen}\textit,
+    keywordstyle=\color{keywordcolor}\bfseries,
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=10pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+    frame=shadowbox,
+    framerule=1pt,
+    rulecolor=\color{bordercolor},
+    frameround=tttt,
+    xleftmargin=10pt,
+    xrightmargin=10pt
+}
+
+\lstset{style=elegantstyle}
+
 
 % Define the number of items in the list
 \newcounter{totalnames}
