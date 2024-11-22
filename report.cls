@@ -163,7 +163,8 @@
     rulecolor=\color{bordercolor},
     frameround=tttt,
     xleftmargin=10pt,
-    xrightmargin=10pt
+    xrightmargin=10pt,
+    basicstyle=\fontfamily{txtt}\selectfont\footnotesize
 }
 
 \lstset{style=elegantstyle}
