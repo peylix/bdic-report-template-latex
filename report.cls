@@ -42,6 +42,10 @@
 \RequirePackage{setspace}
 
 
+% Set font for texttt
+\renewcommand{\ttdefault}{lmtt}
+
+
 % Page layout configuration
 \geometry{
     textheight=9in,
