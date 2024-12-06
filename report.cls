@@ -90,6 +90,42 @@
 
 
 
+% Abstract Box Style
+\newtcolorbox[auto counter, number within=section]{colorfulabstract}[1][]{
+    title={\bfseries Abstract},
+    enhanced,
+    drop shadow={black!50!white},
+    coltitle=black,
+    top=0.2in,
+    bottom=0.15in,
+    attach boxed title to top left={xshift=1.5em, yshift=-\tcboxedtitleheight/2},
+    boxed title style={size=small, colback=white!40!UCDGreen},
+    colback=white,
+    colframe=black!50,
+    width=\textwidth,
+    arc=4mm,
+    auto outer arc,
+    sharp corners=all,
+    #1 % Allow additional customization via arguments
+}
+
+\newtcolorbox[auto counter, number within=section]{monochromeabstract}[1][]{
+    title={\bfseries Abstract},
+    enhanced,
+    coltitle=black,
+    top=0.2in,
+    bottom=0.15in,
+    attach boxed title to top left={xshift=1.5em, yshift=-\tcboxedtitleheight/2},
+    boxed title style={size=small, colback=white, boxrule=0.2mm},
+    colback=white,
+    colframe=black,
+    boxrule=0.2mm,
+    width=\textwidth,
+    arc=4mm,
+    auto outer arc,
+    sharp corners=all,
+    #1 % Allow additional customization via arguments
+}
 
 
 \tcbset {
