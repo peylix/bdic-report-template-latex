@@ -5,6 +5,8 @@
 % Packages for text and input
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[english]{babel}
+\RequirePackage{lmodern}
+\RequirePackage{DejaVuSansMono}
 
 % Packages for math and theorems
 \RequirePackage{amsmath, amsthm, amssymb, amsfonts}
@@ -26,8 +28,7 @@
 % Packages for colors and boxes
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{framed}
-\RequirePackage{tcolorbox}
-\RequirePackage{amsthm}
+\RequirePackage[most]{tcolorbox}
 
 % Other useful packages
 \RequirePackage{algorithmic}
@@ -38,8 +39,6 @@
 \RequirePackage{pgffor}
 \RequirePackage{bookmark}
 \RequirePackage{listings}
-\RequirePackage{DejaVuSansMono}
-\RequirePackage{setspace}
 
 
 % Set font for texttt
@@ -88,6 +87,9 @@
 \definecolor{keywordcolor}{rgb}{0.9, 0.3, 0.1}
 \definecolor{bordercolor}{rgb}{0.7, 0.7, 0.7}
 \definecolor{linenumberbg}{rgb}{0.95, 0.95, 0.95}
+
+
+
 
 
 \tcbset {
