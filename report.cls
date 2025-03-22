@@ -92,7 +92,7 @@
 
 % Abstract Box Style
 \newtcolorbox[auto counter, number within=section]{colorfulabstract}[1][]{
-    title={\bfseries Abstract},
+    title={\bfseries \abstractname},
     enhanced,
     drop shadow={black!50!white},
     coltitle=black,
@@ -110,7 +110,7 @@
 }
 
 \newtcolorbox[auto counter, number within=section]{monochromeabstract}[1][]{
-    title={\bfseries Abstract},
+    title={\bfseries \abstractname},
     enhanced,
     coltitle=black,
     top=0.2in,
