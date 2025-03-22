@@ -259,3 +259,42 @@
     \end{titlepage}
     \endgroup
 }
+
+% Create a compact title at the top of the first page
+\newcommand{\makecompacttitle}{
+    \begingroup
+    \setlength{\parskip}{0pt}
+    
+    % Create a centered header with logos, college name, and course info
+    \begin{center}
+        % \includegraphics[width=0.08\textwidth]{images/UCD_Logo.pdf} \hspace{6cm}
+        % \includegraphics[width=0.12\textwidth]{images/BJUT_Logo.pdf} \par
+        % \vspace{0.3cm}
+        {\normalsize \textsc{Beijing-Dublin International College}} \par
+        \vspace{0.3cm}
+        \vspace{0.2cm}
+        {\Large \textbf{\uppercase{\coursecode \ \reporttitle}}} \par
+        \vspace{0.2cm}
+        {\large \textbf{\projecttitle}} \par
+        \vspace{0.3cm}
+        
+        % Authors section
+        \countnames
+
+        % Print all author names inline with commas between
+        \begingroup
+        \newcounter{namecount}
+        \setcounter{namecount}{0}
+        \foreach \name in \namelist {
+            \stepcounter{namecount}
+            \name
+            \ifthenelse{\value{namecount} < \value{totalnames}}{, }{}
+        }
+        \endgroup
+        \par
+        \vspace{0.1cm}
+        \textbf{Date:} \today
+        \vspace{0.3cm}
+    \end{center}
+    \endgroup
+}
