@@ -4,6 +4,7 @@ A simple but elegant LaTeX template for reports for various modules in Beijing-D
 
 ## Screenshots
 
+### Report with Independent Title Page
 <table>
   <tr>
     <td><img src="./screenshots/title-page.jpg"/></td>
@@ -14,6 +15,14 @@ A simple but elegant LaTeX template for reports for various modules in Beijing-D
   <tr>
     <td><img src="./screenshots/main-body-1.jpg"/></td>
     <td><img src="./screenshots/main-body-2.jpg"/></td>
+  </tr>
+</table>
+
+### Report with Compact Title
+
+<table>
+  <tr>
+    <td><img src="./screenshots/compact-title.jpg"></td>
   </tr>
 </table>
 
