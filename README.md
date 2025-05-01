@@ -1,10 +1,11 @@
 # LaTeX Report Template for BDIC Modules
 
-A simple but elegant LaTeX template for reports for various modules in Beijing-Dublin International College (BDIC).
+A simple but elegant LaTeX template for reports for various modules in Beijing-Dublin International College (BDIC), inspired by [this template](https://www.overleaf.com/latex/templates/math-notes-template/kfqdrzrzpvvk).
 
 ## Screenshots
 
 ### Report with Independent Title Page
+
 <table>
   <tr>
     <td><img src="./screenshots/title-page.jpg"/></td>
@@ -34,4 +35,5 @@ A simple but elegant LaTeX template for reports for various modules in Beijing-D
 
 3. 如果需要在 Overleaf 上编辑该文档，首先将该项目下载为 `.zip` 文件，然后在 Overleaf 上选择 **New Project > Upload Project**，再把 `.zip` 文件拖到弹出的窗口中即可。*(To edit the document on Overleaf, first download the project as a `.zip` file. Then, in Overleaf, select **New Project > Upload Project** and simply drag the `.zip` file into the popup window.)*
 
-*Note: This template is inspired and derived from https://www.overleaf.com/latex/templates/math-notes-template/kfqdrzrzpvvk*
+> [!NOTE]
+> Please note that this template is not an official report template approved or provided by University College Dublin or Beijing University of Technology.
