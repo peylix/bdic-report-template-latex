@@ -217,6 +217,15 @@
     }
 }
 
+% Calculate the number of supervisors
+\newcounter{totalsupervisors}
+\newcommand{\countsupervisors}{
+    \setcounter{totalsupervisors}{0} % Reset counter
+    \foreach \name in \supervisorlist {
+        \stepcounter{totalsupervisors}
+    }
+}
+
 % Title page layout and spacing configuration
 \newcommand{\makenewtitlepage}{
     \begingroup
@@ -237,6 +246,13 @@
         \HRule{0.2pt} \par
         \vspace{\vspacefive}
         {\LARGE \textbf{\projecttitle}} \par
+        % display the subsubtitle if it is defined
+        \ifdefined\subsubtitle
+            \vspace{2cm}
+            % \vspace{0.5cm}
+            {\large {\subsubtitle}} \par
+            \vspace{-2cm}
+        \fi
         \vspace{\vspacesix}
         % if there is more than one author, use "Authors", otherwise use "Author"
         \countnames
@@ -250,6 +266,21 @@
             \name \par
             \vspace{0.1cm}
         }
+        % \name \ (\idnumber) \par
+        \ifdefined\supervisorlist
+            \vspace{\vspaceseven}
+            \countsupervisors
+            \textbf{
+                \ifthenelse{\value{totalsupervisors} > 1}
+                {Supervisors}
+                {Supervisor}
+            } \par
+            \vspace{0.1cm}
+            \foreach \name in \supervisorlist {
+                \name
+                \vspace{0.1cm}
+            } \par
+        \fi
         % \name \ (\idnumber) \par
         \vspace{\vspaceseven}
         \textbf{Date} \par
