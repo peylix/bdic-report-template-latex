@@ -35,5 +35,7 @@ A simple but elegant LaTeX template for reports for various modules in Beijing-D
 
 3. 如果需要在 Overleaf 上编辑该文档，首先将该项目下载为 `.zip` 文件，然后在 Overleaf 上选择 **New Project > Upload Project**，再把 `.zip` 文件拖到弹出的窗口中即可。*(To edit the document on Overleaf, first download the project as a `.zip` file. Then, in Overleaf, select **New Project > Upload Project** and simply drag the `.zip` file into the popup window.)*
 
+4. 该文档的代码中提供了多种选项，可以被方便地启用或禁用。`.cls` 文件的代码十分简单且结构清晰，用户可以对其进行修改来贴合其具体需求。 *(There are plenty of options in the template code that are easy to enable or disable. The source code for the `.cls` file is simple and well-structured and you are welcome to customize the template to suit your needs.)*
+
 > [!NOTE]
-> Please note that this template is not an official report template approved or provided by University College Dublin or Beijing University of Technology.
+> Please note that this template is **not** an official report template approved or provided by University College Dublin or Beijing University of Technology.
