@@ -291,10 +291,12 @@
     \endgroup
 }
 
-% Create a compact title at the top of the first page
+% Create a compact title at the top of the first Page
 \newcommand{\makecompacttitle}{
     \begingroup
     \setlength{\parskip}{0pt}
+
+    \thispagestyle{plain}
     
     % Create a centered header with logos, college name, and course info
     \begin{center}
