@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \LoadClassWithOptions{article}
-\ProvidesPackage{report}[report template for various BDIC courses]
+\ProvidesPackage{report}[report template for various BDIC modules]
 
 % Packages for text and input
 \RequirePackage[utf8]{inputenc}
