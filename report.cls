@@ -40,7 +40,12 @@
 \RequirePackage{pgffor}
 \RequirePackage{bookmark}
 \RequirePackage{listings}
+\RequirePackage{enumitem}
+\RequirePackage{suffix}
 
+% Set padding for enumitem
+\setlist[enumerate]{topsep=-0.5em, itemsep=0em}
+\setlist[itemize]{topsep=-0.5em, itemsep=0em}
 
 % Set font for texttt
 \renewcommand{\ttdefault}{lmtt}
@@ -316,7 +321,7 @@
         {\Large \textbf{\uppercase{\coursecode \ \reporttitle}}} \par
         \vspace{0.2cm}
         {\large \textit{\projecttitle}} \par
-        \vspace{0.3cm}
+        \vspace{0.25cm}
         
         % Authors section
         \countnames
@@ -336,7 +341,6 @@
         \ifdefined\paperdate
             \textbf{Date:} \paperdate
         \fi
-        \vspace{0.3cm}
     \end{flushleft}
     \endgroup
 }
