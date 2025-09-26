@@ -19,6 +19,7 @@
 \RequirePackage{longtable}
 \RequirePackage{multirow}
 \RequirePackage[caption=false,font=footnotesize]{subfig}
+\RequirePackage{tikz}
 
 % Packages for page layout and hyperlinks
 \RequirePackage{geometry}
