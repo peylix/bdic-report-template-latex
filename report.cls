@@ -63,7 +63,11 @@
 \addtolength\headwidth{2\FHoffset}
 \fancyhead[L]{\authorname}
 \fancyhead[C]{\coursecode}
-\fancyhead[R]{\paperdate}
+\fancyhead[R]{
+    \ifdefined\paperdate
+        \paperdate
+    \fi
+}
 
 % Paragraph and line spacing configuration
 \setlength{\parskip}{1em}
@@ -283,9 +287,11 @@
         \fi
         % \name \ (\idnumber) \par
         \vspace{\vspaceseven}
-        \textbf{Date} \par
-        \vspace{0.1cm}
-        \today \par
+        \ifdefined\paperdate
+            \textbf{Date} \par
+            \vspace{0.1cm}
+            \today \par
+        \fi
         \vfill
     \end{titlepage}
     \endgroup
@@ -326,7 +332,9 @@
         \endgroup
         \par
         \vspace{0.1cm}
-        \textbf{Date:} \today
+        \ifdefined\paperdate
+            \textbf{Date:} \paperdate
+        \fi
         \vspace{0.3cm}
     \end{center}
     \endgroup
