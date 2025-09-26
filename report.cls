@@ -249,7 +249,7 @@
         \vspace{0cm}
         \HRule{0.2pt} \par
         \vspace{\vspacefive}
-        {\LARGE \textbf{\projecttitle}} \par
+        {\LARGE \textit{\projecttitle}} \par
         % display the subsubtitle if it is defined
         \ifdefined\subsubtitle
             \vspace{2cm}
@@ -305,7 +305,7 @@
     \thispagestyle{plain}
     
     % Create a centered header with logos, college name, and course info
-    \begin{center}
+    \begin{flushleft}
         % \includegraphics[width=0.08\textwidth]{images/UCD_Logo.pdf} \hspace{6cm}
         % \includegraphics[width=0.12\textwidth]{images/BJUT_Logo.pdf} \par
         % \vspace{0.3cm}
@@ -314,7 +314,7 @@
         \vspace{0.2cm}
         {\Large \textbf{\uppercase{\coursecode \ \reporttitle}}} \par
         \vspace{0.2cm}
-        {\large \textbf{\projecttitle}} \par
+        {\large \textit{\projecttitle}} \par
         \vspace{0.3cm}
         
         % Authors section
@@ -336,6 +336,6 @@
             \textbf{Date:} \paperdate
         \fi
         \vspace{0.3cm}
-    \end{center}
+    \end{flushleft}
     \endgroup
 }
