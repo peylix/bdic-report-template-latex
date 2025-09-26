@@ -1,6 +1,10 @@
 # LaTeX Report Template for BDIC Modules
 
-A simple but elegant LaTeX template for reports for various modules in Beijing-Dublin International College (BDIC), inspired by [this template](https://www.overleaf.com/latex/templates/math-notes-template/kfqdrzrzpvvk).
+An elegant and professional LaTeX template designed for academic reports across various modules in Beijing-Dublin International College (BDIC). This template draws inspiration from [this template](https://www.overleaf.com/latex/templates/math-notes-template/kfqdrzrzpvvk) while being specifically tailored for BDIC coursework.
+
+> [!IMPORTANT]
+> **Disclaimer**: This is an **unofficial** template created for student use. It is not endorsed, provided, or approved by University College Dublin, Beijing University of Technology, or BDIC. The institutional logos used in this template remain the intellectual property of their respective universities and are included solely for academic formatting purposes.
+
 
 ## Screenshots
 
@@ -37,5 +41,3 @@ A simple but elegant LaTeX template for reports for various modules in Beijing-D
 
 4. 该文档的代码中提供了多种选项，可以被方便地启用或禁用。`.cls` 文件的代码十分简单且结构清晰，用户可以对其进行修改来贴合具体需求。 *(There are plenty of options in the template code that are easy to enable or disable. The source code for the `.cls` file is simple and well-structured and you can easily customize the template to suit your needs.)*
 
-> [!NOTE]
-> Please note that this template is **not** an official report template provided or approved by University College Dublin or Beijing University of Technology.
