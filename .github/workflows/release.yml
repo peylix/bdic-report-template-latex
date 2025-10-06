@@ -1,0 +1,79 @@
+name: Release Template
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # trigger when pushing tags starting with `v`
+  workflow_dispatch:  # allow trigger manually
+    version:
+      description: 'Release version (e.g., v1.0.0)'
+      required: true
+      type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create release archive
+        run: |
+          mkdir -p release-temp
+
+          # copy needed files
+          cp -r figures release-temp/
+          cp -r images release-temp/
+          cp -r src release-temp/
+          cp report.cls release-temp/
+          cp LICENSE release-temp/
+          cp main.pdf release-temp/
+          cp main.tex release-temp/
+
+          # create zips
+          cd release-temp
+          zip -r ../report-temlate-release.zip .
+          cd ..
+          tar -czf report-temlate-release.tar.gz -C release-temp .
+
+      - name: Extract version from tag
+        id: get_version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "version=${{ inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "version=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Generate changelog
+        id: changelog
+        run: |
+          # create simple change log
+          cat > RELEASE_NOTES.md << 'EOF'
+          ## 📥 How to use
+
+          1. Download and unzip `report-temlate-release.zip` or `report-temlate-release.tar.gz`
+          2. Add your content to `main.tex`
+          3. Compile the file using PDFLaTeX
+
+          >[!Note]
+          > This release contains only the files you need to compile the LaTeX document. For the complete project files, please check [GitHub Repo](${{ github.server_url }}/${{ github.repository }})
+          EOF
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.get_version.outputs.version }}
+          name: Release ${{ steps.get_version.outputs.version }}
+          files: |
+            report-temlate-release.zip
+            report-temlate-release.tar.gz
+          body_path: RELEASE_NOTES.md
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
