@@ -28,6 +28,7 @@ jobs:
           # copy needed files
           cp -r figures release-temp/
           cp -r images release-temp/
+          cp -r bibliography release-temp/
           cp -r src release-temp/
           cp report.cls release-temp/
           cp LICENSE release-temp/
