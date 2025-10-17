@@ -1,12 +1,22 @@
 .DS_Store
 
+# LaTeX auxiliary files
 *.aux
-*.bbl
-*.fdb_latexmk
-*.blg
-*.fls
 *.log
 *.out
-*.synctex.gz
 *.toc
+*.lof
+*.lot
+
+# BibTeX/biblatex files
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# Other LaTeX temporary files
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.pdf
 *.listing
