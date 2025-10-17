@@ -32,7 +32,6 @@ jobs:
           cp -r src release-temp/
           cp report.cls release-temp/
           cp LICENSE release-temp/
-          cp main.pdf release-temp/
           cp main.tex release-temp/
 
           # create zips
