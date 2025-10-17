@@ -32,6 +32,9 @@
 \newcommand{\projecttitle}{Project: A Simple Time Machine}
 % \newcommand{\subsubtitle}{A project to travel through time}
 
+% Bibliography
+\addbibresource{bibliography/references.bib}
+
 \begin{document}
 
 % Enable these if you prefer an individual title page
@@ -83,8 +86,7 @@
 \section{Conclusion}
     \input{src/conclusion.tex}
 
-% Bibliography
-\bibliography{bibliography/sample}
-\bibliographystyle{plain}
+% Print bibliography
+\printbibliography[heading=bibliography, title={References}]
 
 \end{document}

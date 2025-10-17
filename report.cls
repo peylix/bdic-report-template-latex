@@ -7,6 +7,7 @@
 \RequirePackage[english]{babel}
 \RequirePackage{lmodern}
 \RequirePackage{DejaVuSansMono}
+\RequirePackage{csquotes}
 
 % Packages for math and theorems
 \RequirePackage{amsmath, amsthm, amssymb, amsfonts}
@@ -42,6 +43,31 @@
 \RequirePackage{listings}
 \RequirePackage{enumitem}
 \RequirePackage{suffix}
+
+% Bibliography configuration with biblatex
+% Users can pass options via \ExecuteBibliographyOptions in their main document
+\RequirePackage[
+    backend=biber,          % Use biber as backend (recommended)
+    style=numeric,          % Default citation style (can be changed)
+    sorting=nty,            % Sort by name, title, year
+    maxbibnames=99,         % Show all authors in bibliography
+    maxcitenames=2,         % Show max 2 authors in citations
+    giveninits=true,        % Use initials for first names
+    doi=true,               % Include DOI
+    isbn=true,              % Include ISBN
+    url=true,               % Include URL
+    eprint=false            % Don't include eprint by default
+]{biblatex}
+
+% Customize bibliography heading to match document style
+\defbibheading{bibliography}[\refname]{%
+    \section*{#1}%
+    \markboth{#1}{#1}%
+}
+
+% Add some spacing in bibliography
+\setlength\bibitemsep{0.5\baselineskip}
+
 
 % Set padding for enumitem
 \setlist[enumerate]{topsep=-0.5em, itemsep=0em}
