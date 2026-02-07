@@ -40,8 +40,8 @@ An elegant and professional LaTeX template designed for academic reports across 
 3. **Using the template:** 在 [release](https://github.com/peylix/bdic-report-template-latex/releases) 页面下载 `report-template-release.zip` 或 `report-template-release.tar.gz` 文件。*(Download `report-template-release.zip` 或 `report-template-release.tar.gz` from [release](https://github.com/peylix/bdic-report-template-latex/releases).)*
 
    - 如果使用 Overleaf，在其页面上选择 **New Project > Upload Project**，再把 `.zip` 文件拖到弹出的窗口中即可。*(If you are using Overleaf, go to **New Project > Upload Project** and drag the `.zip` file into the upload window.)*
-   - 如果更想用本地编辑器（如TeXShop、Neovim、VS Code等），可以解压该压缩包，再打开 `main.tex` 来编辑。*(If you prefer using local editors (e.g., TeXShop, Neovim, VS Code, etc.), unzip the file and open `main.tex` to start editing.)*
+   - 如果想用本地编辑器（如 TeXShop、Neovim、VS Code 等），可以解压该压缩包，再打开 `main.tex` 来编辑。*(If you prefer using local editors (e.g., TeXShop, Neovim, VS Code, etc.), unzip the file and open `main.tex` to start editing.)*
 
 
-4. **Customizing:** 该文档的代码中提供了多种选项，可以被方便地启用或禁用。`.cls` 文件的代码十分简单且结构清晰，用户可以对其进行修改来贴合具体需求。 *(There are plenty of options in the template code that are easy to enable or disable. The source code for the `.cls` file is simple and well-structured and you can easily customize the template to suit your needs.)*
+4. **Customizing:** 该文档的代码中提供了多种选项，可以被方便地启用或禁用。`.cls` 文件的代码十分简单且结构清晰，以便对其进行修改来贴合具体需求。 *(There are plenty of options in the template code that are easy to enable or disable. The source code for the `.cls` file is simple and well-structured and you can easily customize the template to suit your needs.)*
 
