@@ -12,3 +12,22 @@ def time_machine_controller():
     print("ERROR: You are now stuck in the year 2099.")
     print("ERROR: GOOD LUCK!")
 \end{lstlisting}
+
+Maybe you would like a binary tree. \par
+\begin{tikzpicture}[
+  level distance=1.5cm,
+  level 1/.style={sibling distance=3cm},
+  level 2/.style={sibling distance=1.5cm},
+  every node/.style={circle, draw, minimum size=0.8cm}
+  ]
+  \node {1}
+    child {node {2}}
+    child {node {3}};
+
+  % Define nodes
+  \node (A) at (3,0) {A};
+  \node (B) at (6,0) {B};
+
+  % Draw arrow from A to B
+  \draw[->, thick] (A) -- (B);
+\end{tikzpicture}

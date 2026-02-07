@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{report}[report template for various BDIC modules]
 \LoadClassWithOptions{article}
-\ProvidesPackage{report}[report template for various BDIC modules]
 
 % Packages for text and input
 \RequirePackage[utf8]{inputenc}
@@ -21,6 +21,7 @@
 \RequirePackage{multirow}
 \RequirePackage[caption=false,font=footnotesize]{subfig}
 \RequirePackage{tikz}
+\RequirePackage{caption}
 
 % Packages for page layout and hyperlinks
 \RequirePackage{geometry}
@@ -75,6 +76,13 @@
 
 % Set font for texttt
 \renewcommand{\ttdefault}{lmtt}
+
+
+% Configure caption settings for figures and tables
+\captionsetup{
+  justification=raggedright,
+  singlelinecheck=false
+}
 
 
 % Page layout configuration
@@ -335,7 +343,7 @@
     \setlength{\parskip}{0pt}
 
     \thispagestyle{plain}
-    
+
     % Create a centered header with logos, college name, and course info
     \begin{flushleft}
         % \includegraphics[width=0.08\textwidth]{images/UCD_Logo.pdf} \hspace{6cm}
@@ -348,19 +356,16 @@
         \vspace{0.2cm}
         {\large \textit{\projecttitle}} \par
         \vspace{0.25cm}
-        
+
         % Authors section
         \countnames
 
         % Print all author names inline with commas between
         \begingroup
         \newcounter{namecount}
-        \setcounter{namecount}{0}
-        \foreach \name in \namelist {
-            \stepcounter{namecount}
-            \name
-            \ifthenelse{\value{namecount} < \value{totalnames}}{, }{}
-        }
+        \ifthenelse{\value{totalnames} > 1}
+            {\textbf{Authors:}}
+            {\textbf{Author:}}~\foreach \name in \namelist {\stepcounter{namecount}\name\ifthenelse{\value{namecount} < \value{totalnames}}{, }{}}
         \endgroup
         \par
         \vspace{0.1cm}
