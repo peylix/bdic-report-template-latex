@@ -81,7 +81,12 @@
 % Configure caption settings for figures and tables
 \captionsetup{
   justification=raggedright,
-  singlelinecheck=false
+  singlelinecheck=false,
+  font={small,sf},
+  labelfont=bf,
+  labelsep=period,
+  skip=10pt,
+  format=plain
 }
 
 
